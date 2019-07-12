@@ -26,6 +26,7 @@ hypernyms = set(hypernyms)
 hyponyms = set(hyponyms)
 	
 print("hypernyms :", ", ".join(hypernyms))
+print("\n")
 print("hyponyms :", ", ".join(hyponyms))
 
 
