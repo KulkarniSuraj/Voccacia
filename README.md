@@ -19,4 +19,4 @@ of a word using popular lexical database for english called [wordnet](https://wo
 3. `pip3 install nltk`
 4. Open python interactive shell
 5. `>>> import nltk`
-4. `>>> nltk.download('wordnet')
+4. `>>> nltk.download('wordnet')`
