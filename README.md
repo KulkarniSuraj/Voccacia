@@ -18,7 +18,8 @@ of a word using popular lexical database for english called [wordnet](https://wo
 2. activate virtual environment if any
 3. `pip3 install nltk`
 4. Open python interactive shell
-5. ```python
+5.
+```python
 >>> import nltk
 >>> nltk.download('wordnet') 
 ```
