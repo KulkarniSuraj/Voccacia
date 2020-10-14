@@ -14,9 +14,11 @@ of a word using popular lexical database for english called [wordnet](https://wo
 
 ## Installation
 
-1. clone this repo `https://github.com/KulkarniSuraj/Voccacia.git`
+1. clone this repo `git clone https://github.com/KulkarniSuraj/Voccacia.git`
 2. activate virtual environment if any
 3. `pip3 install nltk`
 4. Open python interactive shell
-5. `>>> import nltk`
-4. `>>> nltk.download('wordnet')`
+```python
+>>> import nltk
+>>> nltk.download('wordnet')
+```
