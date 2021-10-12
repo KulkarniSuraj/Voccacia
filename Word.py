@@ -23,4 +23,13 @@ class Word:
 				synonyms.add(lemma.name())
 		return synonyms
 
+	def get_antonyms(self):
+		from nltk.corpus import wordnet
+		antonyms = set()
+		for syn in self.syns:
+			for lemma in syn.lemmas():
+				if lemma.antonyms():
+					for antonym in lemma.antonyms():
+						antonyms.add(antonym)
+		return antonyms
 
