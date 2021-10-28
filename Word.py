@@ -30,6 +30,6 @@ class Word:
 			for lemma in syn.lemmas():
 				if lemma.antonyms():
 					for antonym in lemma.antonyms():
-						antonyms.add(antonym)
+						antonyms.add(antonym.name())
 		return antonyms
 
