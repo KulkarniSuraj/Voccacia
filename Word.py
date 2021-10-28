@@ -33,3 +33,13 @@ class Word:
 						antonyms.add(antonym.name())
 		return antonyms
 
+	def get_definitions(self):
+		from nltk.corpus import wordnet
+		# defs will contain definitions and examples associated with it
+		
+		defs = {}
+		for syn in self.syns:
+			defs[syn.definition()] = [ex for ex in syn.examples() if syn.examples()]
+
+		return defs
+
