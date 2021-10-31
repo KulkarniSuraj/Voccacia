@@ -54,3 +54,14 @@ class Word:
 							hyponyms.add(l.name())
 		return hyponyms
 
+	def get_hypernyms(self):
+		# hypernyms are specific words i.e. car is hypernym of vehicle
+		hypernyms = set()
+		for syn in self.syns:
+			if syn.hypernyms():
+				for hyper in syn.hypernyms():
+					if hyper.lemmas():
+						for l in hyper.lemmas():
+							hypernyms.add(l.name())
+		return hypernyms
+
