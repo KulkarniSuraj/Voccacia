@@ -43,3 +43,25 @@ class Word:
 
 		return defs
 
+	def get_hyponyms(self):
+		# hyponyms are generic word i.e. vehicle is hyponym of car
+		hyponyms = set()
+		for syn in self.syns:
+			if syn.hyponyms():
+				for hypo in syn.hyponyms():
+					if hypo.lemmas():
+						for l in hypo.lemmas():
+							hyponyms.add(l.name())
+		return hyponyms
+
+	def get_hypernyms(self):
+		# hypernyms are specific words i.e. car is hypernym of vehicle
+		hypernyms = set()
+		for syn in self.syns:
+			if syn.hypernyms():
+				for hyper in syn.hypernyms():
+					if hyper.lemmas():
+						for l in hyper.lemmas():
+							hypernyms.add(l.name())
+		return hypernyms
+

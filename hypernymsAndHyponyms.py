@@ -1,5 +1,4 @@
 from nltk.corpus import wordnet
-import random
 
 word = input("Enter word : ")
 # hypernyms are generic word
