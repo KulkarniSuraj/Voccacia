@@ -23,4 +23,11 @@ of a word using popular lexical database for english called [wordnet](https://wo
 >>> import nltk
 >>> nltk.download('wordnet') 
 ```
+## Set up for Development
+ ```sh
+git clone https://github.com/KulkarniSuraj/Voccacia.git
+python3 -m venv .venv
+pip3 install -r requirements.txt
+python3 -m nltk.downloader -d .venv/nltk_data wordnet
+ ```
 
