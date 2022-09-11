@@ -10,9 +10,7 @@ class Word:
 		else:
 			raise ValueError("Invalid word")
 		# generate synset of the word 
-		self.syns = []
-		for syn in wordnet.synsets(self.word):
-			self.syns.append(syn)
+		self.syns = wordnet.synsets(self.word)
 
 	def get_synonyms(self):
 		from nltk.corpus import wordnet
